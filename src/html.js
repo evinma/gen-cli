@@ -8,22 +8,22 @@ const ora = require('ora');
 
 const basePath = process.cwd()
 
-const pickParams = (params) => {
-    const result = {}
-    let key, val
-    params.forEach((c) => {
-        if (c.startsWith('-')) {
-            if (key) {
-                result[key] = val
-            }
-            key = c.slice(1)
-        } else {
-            val = c
-        }
-    })
-    result[key] = val
-    return result
-}
+// const pickParams = (params) => {
+//     const result = {}
+//     let key, val
+//     params.forEach((c) => {
+//         if (c.startsWith('-')) {
+//             if (key) {
+//                 result[key] = val
+//             }
+//             key = c.slice(1)
+//         } else {
+//             val = c
+//         }
+//     })
+//     result[key] = val
+//     return result
+// }
 
 const compositionHtml = ({ name } = { name: '' }) => {
     return `<!DOCTYPE html>
